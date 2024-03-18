@@ -1,0 +1,31 @@
+<h2>Démonstration 01 - Interpolation de chaines (One-Way binding)</h2>
+
+<p>
+    L'interpolation, notée avec des doubles accolades <code ngNonBindable>{{ expression }}, permet d'insérer dynamiquement des valeurs variables dans le contenu HTML.</code>
+</p>
+
+<p>Récupération des valeurs se fait de TypeScript vers HTML</p>
+
+<h3>Affichage des valeurs :</h3>
+
+<p>Type primitif : string {{ variable1 }}</p>
+<p>Type primitif : number {{ variable2 }}</p>
+<p>Type primitif : boolean {{ variable3 }}</p>
+
+<p>Array : string[] {{ variable4 }}</p>
+<p>Array : number[] {{ variable5 }}</p>
+<p>Array : boolean[] {{ variable6 }}</p>
+
+
+<p>Definite assigment assertion : string {{ variable7 }}</p>
+<p>Ambient declaration : number {{ variable8 }}</p>
+
+
+<p>Any : any[] {{ variable9[0] }}</p>
+<p>Any : any[] {{ variable9[1] }}</p>
+<p>Any : any[] {{ variable9[2]() }}</p>
+
+<p>Méthodes : function anonyme {{ variable10() }}</p>
+<p>Méthodes : function fléchée {{ variable11() }}</p>
+<p>Méthodes : a: 5 et b: 3 {{ variable12(5, 3) }}</p>
+<p>Méthodes : a: 5 et b: 3 {{ variable13(5, 3) }}</p>
