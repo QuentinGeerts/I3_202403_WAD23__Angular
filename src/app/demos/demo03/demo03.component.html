@@ -1,0 +1,32 @@
+<h2>Démonstration 03 - Event binding</h2>
+
+<p>Permet de lier un événement JS à une méthode définie dans le TS</p>
+
+<h3>Click Event (cliquer sur le bouton souris)</h3>
+<p>Valeur du compteur : {{ compteur }} </p>
+<button (click)="decrease()">-</button>
+<button (click)="increase()">+</button>
+
+
+<h3>MouseEnter Event (Survole de la souris)</h3>
+<p>Valeur du compteur : {{ compteur }} </p>
+<button (mouseenter)="decrease()">-</button>
+<button (mouseenter)="increase()">+</button>
+
+
+<!-- 
+    ngSubmit : prend en compte l'envoi via le bouton ET la touche enter
+    submit   : prend en compte l'envoi via le bouton uniquement
+ -->
+<form (ngSubmit)="sendInfo($event)">
+
+    <label for="firstname">Firstname: </label>
+    <input type="text" name="firstname" id="firstname" [(ngModel)]="firstname">
+
+    <label for="lastname">Lastname: </label>
+    <input type="text" name="lastname" id="lastname" [(ngModel)]="lastname">
+
+    <input type="submit" value="Envoyer">
+
+</form>
+

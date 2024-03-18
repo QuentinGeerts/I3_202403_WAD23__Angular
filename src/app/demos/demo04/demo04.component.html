@@ -1,0 +1,11 @@
+<h2>Démonstration 04 - Attribute binding</h2>
+
+<p>Permet de lier un attribut avec le TS.</p>
+<p>Tous les attributs HTML sont touchables.</p>
+
+<img [src]="srcImage" [alt]="altImage">
+
+<p>Valeur du champ : {{ valueInput }}</p>
+<input type="text" [value]="valueInput" (input)="changeValue($event)">
+
+<input type="range" [min]="minRange" [max]="maxRange" [(ngModel)]="rangeValue"> <span>({{ rangeValue }})</span>
