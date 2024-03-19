@@ -1,1 +1,26 @@
-<p>exo04 works!</p>
+<h2>Exercice 04 - Toggle password</h2>
+
+<p>Créer une application qui affiche un formulaire de connexion où l'utilisateur peut rendre visible son mot de passe ou
+    non.</p>
+
+<hr>
+
+<form>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email">
+
+    <label for="password">Password:</label>
+    
+    <input [type]="inputType">
+    
+    <input type="checkbox" (input)="togglePassword()">
+
+    <label for="toggle-password">
+        Afficher le mot de passe
+    </label>
+
+    <button>Connexion</button>
+
+
+</form>

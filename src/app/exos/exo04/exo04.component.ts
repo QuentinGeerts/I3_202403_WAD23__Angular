@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class Exo04Component {
 
+  inputType: string = "password";
+
+
+  togglePassword() {
+    this.inputType = this.inputType === "password" ? "text" : "password";
+  }
+
 }
