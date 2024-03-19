@@ -24,3 +24,10 @@ Astuce : Cherchez du côté de setInterval() et de l'interpolation de chaine en 
 Exercice 04 - Toggle password
 
 Créer une application qui affiche un formulaire de connexion où l'utilisateur peut rendre visible son mot de passe ou non.
+
+---
+
+Exercice 05 - Menu complet
+
+Vous devez créer un menu de navigation complet en reprennant toutes les démonstrations et exercices réalisés.
+En version Lazy-loadé.

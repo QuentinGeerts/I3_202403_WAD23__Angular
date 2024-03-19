@@ -12,26 +12,26 @@ import { DemosComponent } from './demos/demos.component';
 
 const routes: Routes = [
 
-  { path: 'home', component: HomeComponent }, // BASE_URL + 'home'
+  { path: 'home', component: HomeComponent, title: "Acceuil" }, // BASE_URL + 'home'
   { path: '', redirectTo: 'home', pathMatch: 'full' }, // BASE_URL + ''
 
   // BASE_URL + 'demos/'
   {
     path: 'demos', children: [
-      { path: '', component: DemosComponent },
-      { path: 'demo01', component: Demo01Component },
-      { path: 'demo02', component: Demo02Component },
-      { path: 'demo03', component: Demo03Component },
-      { path: 'demo04', component: Demo04Component },
+      { path: '', component: DemosComponent, title: 'Démonstrations' },
+      { path: 'demo01', component: Demo01Component, title: 'Démonstration 01 - L\'interpolation de chaines' },
+      { path: 'demo02', component: Demo02Component, title: 'Démonstration 02 - Two-way binding (ngModel)' },
+      { path: 'demo03', component: Demo03Component, title: 'Démonstration 03 - Event binding' },
+      { path: 'demo04', component: Demo04Component, title: 'Démonstration 04 - Attribute binding' },
     ]
   },
 
-  { 
-    path: 'admin', 
-    loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule) 
+  {
+    path: 'admin',
+    loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule)
   },
 
-  { path: '**', component: NotFoundComponent },
+  { path: '**', component: NotFoundComponent, title: "Page non trouvée" },
 ];
 
 @NgModule({
