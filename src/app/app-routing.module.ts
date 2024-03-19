@@ -27,6 +27,11 @@ const routes: Routes = [
   },
 
   {
+    path: 'exos',
+    loadChildren: () => import('./exos/exos.module').then(m => m.ExosModule)
+  },
+
+  {
     path: 'admin',
     loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule)
   },

@@ -13,4 +13,6 @@ Pour générer un composant :
 > ng generate component chemin/vers/le/composant
 
 Pour générer un module :
-> ng generate module chemin/vers/le/module
+> ng generate module chemin/vers/le/module [--routing]
+
+`--routing` : permet d'ajouter le système de routing
