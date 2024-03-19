@@ -14,9 +14,13 @@ export class Demo04Component {
 
   valueInput: string = "Hello world";
 
-  changeValue (event: InputEvent | any) {
-    console.log(event);
-    this.valueInput = event.target.value;
+  changeValue (event: Event) {
+    // console.log(event);
+    const input = event.target as HTMLInputElement;
+    this.valueInput = input.value;
+    
+    // const {value} = event.target as HTMLInputElement;
+    // this.valueInput = value;
   }
 
 
