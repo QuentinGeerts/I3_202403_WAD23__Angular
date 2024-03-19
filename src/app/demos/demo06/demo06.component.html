@@ -1,0 +1,56 @@
+<h2>Démonstration 06 - Les pipes</h2>
+
+<p>Les pipes sont des fonctions qui permettent de transformer une expression dans la vue.</p>
+<p>Pour utiliser une pipe, vous devez écrire <code ngNonBindable>{{ expression | nomPipe }}</code></p>
+
+<h3>Exemples : </h3>
+
+<h4>Pipe string</h4>
+
+<p>Uppercase : {{ "Bonjour tout le monde. Je m'appelle Quentin." | uppercase }}</p>
+<p>Lowercase : {{ "Bonjour tout le monde. Je m'appelle Quentin." | lowercase }}</p>
+<p>Titlecase : {{ "Bonjour tout le monde. Je m'appelle Quentin." | titlecase }}</p>
+
+<h4>Pipe Number | Percent</h4>
+
+<p><code ngNonBindable>{{ expression | number : digitsInfo : locale }}</code></p>
+<p>digitsInfo : minIntegerDigits . minFractionDigits - maxFractionDigits</p>
+
+<p>Avant : {{ 1234.5678 }}</p>
+<p>Après : {{ 1234.5678 | number }}</p>
+<p>Après : {{ 1234.5678 | number : '5.1-2' }}</p>
+<p>Après : {{ 1234.5678 | number : '5.1-2' : 'fr-FR' }}</p>
+<p>Après : {{ 1234.5678 | percent : '5.1-2' : 'fr-FR' }}</p>
+
+<h4>Pipe Date</h4>
+
+<p>Avant : {{ today }}</p>
+<p>Après : {{ today | date : 'dd MMMM yyyy' }}</p>
+<p>Après : {{ today | date : 'dd MMMM yyyy HH:mm:ss' : 'GMT+1' }}</p>
+<p>Après : {{ today | date : 'dd MMMM yyyy HH:mm:ss' : 'GMT+8' }}</p>
+<p>Après : {{ today | date : 'dd MMMM yyyy HH:mm:ss' : 'GMT-8' }}</p>
+<p>Après : {{ today | date : 'dd MMMM yyyy HH:mm:ss' : 'GMT+1' : 'fr-FR' }}</p>
+<p>Après : {{ today | date : 'dd MMMM yyyy HH:mm:ss' : 'GMT+1' : 'es-ES' }}</p>
+
+<h4>Pipe Currency</h4>
+
+<p>Avant : {{ 1234.56 }}</p>
+<p>Après : {{ 1234.56 | currency }}</p>
+<p>Après : {{ 1234.56 | currency : 'EUR' }}</p>
+<p>Après : {{ 1234.56 | currency : 'USD' }}</p>
+<p>Après : {{ 1234.56 | currency : 'JPY' }}</p>
+
+<p>Après : {{ 1234.56 | currency : 'EUR' : 'symbol' }}</p> <!-- par défaut-->
+<p>Après : {{ 1234.56 | currency : 'EUR' : 'code' }}</p>
+<p>Après : {{ 1234.56 | currency : 'EUR' : 'symbol-narrow' }}</p>
+
+<p>Après : {{ 1234.56 | currency : 'EUR' : 'symbol' : '1.1-3' }}</p>
+<p>Après : {{ 1234 | currency : 'EUR' : 'symbol' : '1.1-3' }}</p>
+<p>Après : {{ 1234.5665 | currency : 'EUR' : 'symbol' : '1.1-3' }}</p>
+
+<p>Après : {{ 1234.56 | currency : 'EUR' : 'symbol' : '1.1-3' : 'fr-FR' }}</p>
+
+<h4>Pipe JSON</h4>
+
+<p>Avant : {{ quentin }}</p>
+<p>Après : {{ quentin | json }}</p>

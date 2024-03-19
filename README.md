@@ -16,3 +16,6 @@ Pour générer un module :
 > ng generate module chemin/vers/le/module [--routing]
 
 `--routing` : permet d'ajouter le système de routing
+
+Pour générer un pipe : 
+> ng generate pipe chemin/vers/le/pipe

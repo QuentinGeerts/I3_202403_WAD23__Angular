@@ -14,6 +14,8 @@ import { Exo03Component } from './exos/exo03/exo03.component';
 import { Exo04Component } from './exos/exo04/exo04.component';
 import { SharedModule } from './shared/shared.module';
 import { DemosComponent } from './demos/demos.component';
+import { Demo06Component } from './demos/demo06/demo06.component';
+import { Demo07Component } from './demos/demo07/demo07.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { DemosComponent } from './demos/demos.component';
     Demo04Component,
     Exo03Component,
     Exo04Component,
-    DemosComponent
+    DemosComponent,
+    Demo06Component,
+    Demo07Component
   ],
   imports: [
     BrowserModule,

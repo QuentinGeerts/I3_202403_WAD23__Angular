@@ -1,0 +1,14 @@
+<h2>Démonstration 07 - Les custom Pipes</h2>
+
+
+<h3>Transformation d'un nombre de secondes en jours/heures/minutes/secondes</h3>
+
+<p>Avant : {{ 90_061 }}</p>
+<p>Avant : {{ 90_061 | secondsToDHMS }}</p>
+
+
+<h3>Transformation de plusieurs valeurs numériques en une somme</h3>
+
+<p>Avant : {{ 0 }} </p>
+<p>Avant : {{ 0 | addition : 10 : 20 : 30 }} </p>
+<p>Avant : {{ 150 | addition : 11 : 21 : 31 }} </p>

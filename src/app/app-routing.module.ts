@@ -7,6 +7,8 @@ import { Demo02Component } from './demos/demo02/demo02.component';
 import { Demo03Component } from './demos/demo03/demo03.component';
 import { Demo04Component } from './demos/demo04/demo04.component';
 import { DemosComponent } from './demos/demos.component';
+import { Demo06Component } from './demos/demo06/demo06.component';
+import { Demo07Component } from './demos/demo07/demo07.component';
 
 // BASE_URL = http://localhost:4200/
 
@@ -23,6 +25,8 @@ const routes: Routes = [
       { path: 'demo02', component: Demo02Component, title: 'Démonstration 02 - Two-way binding (ngModel)' },
       { path: 'demo03', component: Demo03Component, title: 'Démonstration 03 - Event binding' },
       { path: 'demo04', component: Demo04Component, title: 'Démonstration 04 - Attribute binding' },
+      { path: 'demo06', component: Demo06Component, title: 'Démonstration 06 - Les Pipes' },
+      { path: 'demo07', component: Demo07Component, title: 'Démonstration 07 - Les custom Pipes' }
     ]
   },
 

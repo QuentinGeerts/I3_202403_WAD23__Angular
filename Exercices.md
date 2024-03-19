@@ -36,3 +36,19 @@ rendre visible son mot de passe ou non.
 Vous devez créer un menu de navigation complet en reprennant toutes les démonstrations 
 et exercices réalisés.
 En version Lazy-loadé.
+
+---
+
+## Exercice 07.1 - Le chronomètre (Custom Pipe)
+
+Mettre en place un chronomètre :
+- 3 boutons : Start, Pause, Stop (actif / inactif)
+- Affichage "xx:xx"
+
+## Exercice 07.2 - Convertisseur de température
+
+Créer une application qui permet de convertir une témpérature en °C à °F et inversément.
+
+Deux pipes, un "toFahrenheit" et "toCelsius" qui permettent de convertir une température d'une unité à l'autre.
+
+Un pipe universel qui permet de convertir vers l'unité souhaité en paramètre du pipe.
