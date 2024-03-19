@@ -12,6 +12,8 @@ import { Demo03Component } from './demos/demo03/demo03.component';
 import { Demo04Component } from './demos/demo04/demo04.component';
 import { Exo03Component } from './exos/exo03/exo03.component';
 import { Exo04Component } from './exos/exo04/exo04.component';
+import { SharedModule } from './shared/shared.module';
+import { DemosComponent } from './demos/demos.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,14 @@ import { Exo04Component } from './exos/exo04/exo04.component';
     Demo03Component,
     Demo04Component,
     Exo03Component,
-    Exo04Component
+    Exo04Component,
+    DemosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule, // Obligatoire pour le ngModel
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
