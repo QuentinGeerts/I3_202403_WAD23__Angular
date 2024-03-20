@@ -10,4 +10,8 @@ export class Exo07dot2Component {
   tempCelsiusToFahrenheit: number = 50; // 122 °F
   tempFahrenheitToCelsius: number = 50; // 10 °C
 
+  temp: number = 32;
+
+  unite: string = 'fahrenheit';
+
 }

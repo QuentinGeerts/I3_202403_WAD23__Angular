@@ -8,15 +8,26 @@
 
 <hr>
 
+<h3>ToFahrenheit:</h3>
 <label for="">°C to °F</label>
 <input type="number" [(ngModel)]="tempCelsiusToFahrenheit">
 
 <p>{{ tempCelsiusToFahrenheit | toFahrenheit }}</p>
 
 
-
-
+<h3>ToCelsius:</h3>
 <label for="">°F to °C</label>
 <input type="number" [(ngModel)]="tempFahrenheitToCelsius">
 
 <p>{{ tempFahrenheitToCelsius | toCelsius }}</p>
+
+
+<h3>Temp Converter:</h3>
+<input type="number" [(ngModel)]="temp">
+
+<select [(ngModel)]="unite">
+    <option value="celsius">Vers Celsius</option>
+    <option value="fahrenheit">Vers Fahrenheit</option>
+</select>
+
+<p>{{ temp | tempConverter : unite }}</p>
