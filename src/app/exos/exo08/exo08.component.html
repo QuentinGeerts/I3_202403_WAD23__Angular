@@ -1,0 +1,60 @@
+<h2>Exercice 08 - Générateur de formes</h2>
+
+<!-- // Ng Style -->
+<p>Créer une application qui permet de modifier les propriétés d'un quadrilatère : </p>
+<ul>
+    <li>Largeur</li>
+    <li>Hauteur</li>
+    <li>Couleur</li>
+    <li>Bordures</li>
+</ul>
+<!-- // NgClass -->
+<p>Permettre à l'utilisateur de transformer le quadrilatère en cercle.</p>
+
+<hr>
+
+<div id="formulaire">
+    <h3>Propriétés du quadrilatère</h3>
+
+    <label>Hauteur {{ height }}</label>
+    <input type="range" [(ngModel)]="height" (input)="update()" min="20" max="1000" step="5">
+
+    <label>Largeur {{ width }}</label>
+    <input type="range" [(ngModel)]="width" (input)="update()" min="20" max="1000" step="5">
+
+    <label>Couleur</label>
+    <input type="color" [(ngModel)]="color" (input)="update()">
+
+    <label>Cercle ?</label>
+    <input type="checkbox" [(ngModel)]="isCircle">
+
+    
+    <h3>Propriétés des bordures</h3>
+    
+    <label>Largeur {{ width }}</label>
+    <input type="range" [(ngModel)]="borderWidth" (input)="update()" min="1" max="20" step="1">
+    
+    <label>Couleur</label>
+    <input type="color" [(ngModel)]="borderColor" (input)="update()">
+
+    <label>Style</label>
+    <select [(ngModel)]="borderStyle" (ngModelChange)="update()">
+        <option value="none">None</option>
+        <option value="hidden">Hidden</option>
+        <option value="dotted">Dotted</option>
+        <option value="dashed">Dashed</option>
+        <option value="solid">Solid</option>
+        <option value="double">Double</option>
+        <option value="groove">Groove</option>
+        <option value="ridge">ridge</option>
+        <option value="inset">inset</option>
+        <option value="outset">outset</option>
+    </select>
+
+</div>
+
+<div>
+
+    <div [ngStyle]="styles" [ngClass]="{ circle : isCircle }"></div>
+
+</div>
