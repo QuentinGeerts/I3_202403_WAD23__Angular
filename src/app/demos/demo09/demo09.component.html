@@ -1,0 +1,61 @@
+<h2>Démonstration 09 - Les directives structurelles</h2>
+
+<p>Il existe 3 structures :</p>
+
+<ul>
+    <li>*ngIf : affiche un élément en fonction d'une expression booléenne</li>
+    <li>*ngFor : permet de répéter un élément un certains nombres de fois</li>
+    <li>*ngSwitch : permet d'afficher plusieurs éléments HTML en fonctione d'une valeur</li>
+</ul>
+
+<h3 ngNonBindable>*ngIf ou @if { ... }</h3>
+
+<button (click)="toggleVisibility()">Toggle paragraph</button>
+
+<p *ngIf="isVisible; else elseBlock">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi nobis, porro esse deleniti debitis magnam provident iusto quia. Harum debitis nihil iste recusandae expedita, amet similique blanditiis dolores consequuntur distinctio!
+</p>
+
+<ng-template #elseBlock>
+    <p>Pas de données à afficher.</p>
+</ng-template>
+
+
+@if (isVisible) {
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum dolore sit officiis illum eaque voluptatibus itaque rem quasi, repudiandae libero esse explicabo maiores! Quaerat ipsam incidunt optio iste, aperiam praesentium!
+    </p>
+}
+@else if (false) {
+    <!-- ... -->
+}
+@else {
+    <p>Pas de données ...</p>
+}
+
+<h3 ngNonBindable>*ngfor ou @for () { ... }</h3>
+
+<ul *ngIf="stagiaires">
+    <li *ngFor="let stagiaire of stagiaires; let i = index; let even = even; let odd = odd" [ngClass]="{ isOdd: odd, isEven: even }">{{ i }} - {{ stagiaire }}</li>
+</ul>
+
+<ul>
+@for (stagiaire of stagiaires; track i; let i = $index; let even = $even; let odd = $odd) {
+    <li [ngClass]="{ isOdd: odd, isEven: even }">{{ i }} - {{ stagiaire }}</li>
+}
+</ul>
+
+@switch (color) {
+    @case ("red") {
+        <p>Red</p>
+    }
+    @case ("green") {
+        <p>Green</p>
+    }
+    @case ("blue") {
+        <p>Blue</p>
+    }
+    @default {
+        <p>Couleur non reconnue</p>
+    }
+}

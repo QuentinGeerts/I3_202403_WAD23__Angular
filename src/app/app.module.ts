@@ -14,6 +14,7 @@ import { DemosComponent } from './demos/demos.component';
 import { Demo06Component } from './demos/demo06/demo06.component';
 import { Demo07Component } from './demos/demo07/demo07.component';
 import { Demo08Component } from './demos/demo08/demo08.component';
+import { Demo09Component } from './demos/demo09/demo09.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { Demo08Component } from './demos/demo08/demo08.component';
     DemosComponent,
     Demo06Component,
     Demo07Component,
-    Demo08Component
+    Demo08Component,
+    Demo09Component
   ],
   imports: [
     BrowserModule,
