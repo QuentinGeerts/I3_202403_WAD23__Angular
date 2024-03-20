@@ -1,0 +1,22 @@
+<h2>Exercice 07.2 - Convertisseur de température</h2>
+
+<p>Créer une application qui permet de convertir une témpérature en °C à °F et inversément.</p>
+
+<p>Deux pipes, un "toFahrenheit" et "toCelsius" qui permettent de convertir une température d'une unité à l'autre.</p>
+
+<p>Un pipe universel qui permet de convertir vers l'unité souhaité en paramètre du pipe.</p>
+
+<hr>
+
+<label for="">°C to °F</label>
+<input type="number" [(ngModel)]="tempCelsiusToFahrenheit">
+
+<p>{{ tempCelsiusToFahrenheit | toFahrenheit }}</p>
+
+
+
+
+<label for="">°F to °C</label>
+<input type="number" [(ngModel)]="tempFahrenheitToCelsius">
+
+<p>{{ tempFahrenheitToCelsius | toCelsius }}</p>

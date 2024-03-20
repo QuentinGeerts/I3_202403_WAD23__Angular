@@ -1,0 +1,15 @@
+<h2>Exercice 07.1 - Le chronomètre (Custom Pipe)</h2>
+
+<p>Mettre en place un chronomètre :</p>
+<ul>
+    <li>3 boutons : Start, Pause, Stop (actif / inactif)</li>
+    <li>Affichage "xx:xx"</li>
+</ul>
+
+<hr>
+
+<p>Timer : {{ count | chrono }}</p>
+
+<button (click)="start()">Démarrer</button>
+<button (click)="stop()">Arrêter</button>
+<button (click)="reset()">Reset</button>
