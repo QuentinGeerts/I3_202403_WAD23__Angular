@@ -52,3 +52,17 @@ Créer une application qui permet de convertir une témpérature en °C à °F e
 Deux pipes, un "toFahrenheit" et "toCelsius" qui permettent de convertir une température d'une unité à l'autre.
 
 Un pipe universel qui permet de convertir vers l'unité souhaité en paramètre du pipe.
+
+---
+
+## Exercice 08 - Générateur de formes
+
+// Ng Style
+Créer une application qui permet de modifier les propriétés d'un quadrilatère : 
+- Largeur
+- Hauteur
+- Couleur
+- Bordures
+
+// NgClass
+Permettre à l'utilisateur de transformer le quadrilatère en cercle.

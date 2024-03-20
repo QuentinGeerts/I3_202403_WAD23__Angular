@@ -9,6 +9,7 @@ import { Demo04Component } from './demos/demo04/demo04.component';
 import { DemosComponent } from './demos/demos.component';
 import { Demo06Component } from './demos/demo06/demo06.component';
 import { Demo07Component } from './demos/demo07/demo07.component';
+import { Demo08Component } from './demos/demo08/demo08.component';
 
 // BASE_URL = http://localhost:4200/
 
@@ -26,7 +27,8 @@ const routes: Routes = [
       { path: 'demo03', component: Demo03Component, title: 'Démonstration 03 - Event binding' },
       { path: 'demo04', component: Demo04Component, title: 'Démonstration 04 - Attribute binding' },
       { path: 'demo06', component: Demo06Component, title: 'Démonstration 06 - Les Pipes' },
-      { path: 'demo07', component: Demo07Component, title: 'Démonstration 07 - Les custom Pipes' }
+      { path: 'demo07', component: Demo07Component, title: 'Démonstration 07 - Les custom Pipes' },
+      { path: 'demo08', component: Demo08Component, title: 'Démonstration 08 - Les directives de composants' },
     ]
   },
 
