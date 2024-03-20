@@ -66,3 +66,22 @@ Créer une application qui permet de modifier les propriétés d'un quadrilatèr
 
 // NgClass
 Permettre à l'utilisateur de transformer le quadrilatère en cercle.
+
+## Exercice 09 - Panier de courses
+
+Créer une application qui permet à l'utilisateur de saisir un nom d'article et une quantité.
+L'application doit pouvoir également afficher la liste des articles avec la quantité et la date d'ajout. (formatée [coucou les pipes])
+
+L'utilisateur peut également supprimer un élément de la liste.
+Utilisez le model fournis pour réaliser l'exercice.
+
+Pour créer une interface : 
+> ng generate interface article
+
+```typescript
+export interface Article {
+    name: string;
+    quantity: number;
+    dateAdd: Date;
+}
+```
