@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Stagiaire } from './stagiaire';
 
 @Component({
   selector: 'app-demo09',
@@ -8,6 +9,10 @@ import { Component } from '@angular/core';
 export class Demo09Component {
 
   stagiaires: string[] = ['Hanane', 'Emanuela', 'Elena', 'Najoua', 'Vitória', 'Senem', 'Margot', 'Laurence', 'Dorine', 'Hélêne', 'Yusrâ', 'Hsin-I']
+
+  stagiaires2: Stagiaire[] = [
+    { lastname: 'Geerts', firstname: 'Quentin' }
+  ]
 
   isVisible: boolean = false;
 
