@@ -95,3 +95,6 @@ Dans le premier, un champ texte permettant l'ajout d'un article à la liste.
 Dans le deuxième, l'affichage de la liste et la possibilité de supprimer un article.
 
 Les deux composants doivent être affichage sur une même page.
+
+Composant Exo11 (Premier)
+    - Composant List (Deuxième)
