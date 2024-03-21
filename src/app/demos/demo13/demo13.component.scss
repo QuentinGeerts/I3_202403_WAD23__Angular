@@ -1,0 +1,12 @@
+.form > * {
+    display: block;
+    margin: 10px 0;
+}
+
+.valid {
+    border: 1px solid lightgreen;
+}
+
+.invalid {
+    border: 1px solid lightcoral;
+}

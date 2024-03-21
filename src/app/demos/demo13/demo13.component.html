@@ -1,0 +1,67 @@
+<h2>Démonstration 13 - Les formulaires</h2>
+
+<h3>Two-way binding</h3>
+<form class="form" (ngSubmit)="onSubmitTWB()">
+    <label for="lastname">Lastname:</label>
+    <input type="text" name="lastname" id="lastname" [(ngModel)]="lastname">
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" [(ngModel)]="email">
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" [(ngModel)]="password">
+
+    <label for="hobbies">Hobbies:</label>
+    <div><input type="checkbox" name="html" value="html" [(ngModel)]="html"> <label>html</label></div>
+    <div><input type="checkbox" name="css" value="css" [(ngModel)]="css"> <label>css</label></div>
+    <div><input type="checkbox" name="javascript" value="javascript" [(ngModel)]="javascript"> <label>javascript</label>
+    </div>
+    <div><input type="checkbox" name="angular" value="angular" [(ngModel)]="angular"> <label>angular</label></div>
+    <div><input type="checkbox" name="react" value="react" [(ngModel)]="react"> <label>react</label></div>
+
+    <button (submit)="onSubmitTWB()">Envoyer</button>
+</form>
+
+<h3>Avec validators</h3>
+
+<form class="form" [formGroup]="myForm" (ngSubmit)="onSubmitValidators()">
+    <label for="lastname">Lastname:</label>
+    <input type="text" formControlName="lastname"
+        [ngClass]="{ invalid: myForm.get('lastname')?.touched && myForm.get('lastname')?.invalid }">
+    <span *ngIf="myForm.get('lastname')?.touched && myForm.get('lastname')?.invalid">
+        Le champ est requis coco
+    </span>
+
+    <label for="email">Email:</label>
+    <input type="email" formControlName="email">
+
+    <label for="password">Password:</label>
+    <input type="password" formControlName="password">
+
+    <label for="hobbies">Hobbies:</label>
+    <div><input type="checkbox" value="html" formControlName="html"> <label>html</label></div>
+    <div><input type="checkbox" value="css" formControlName="css"> <label>css</label></div>
+    <div><input type="checkbox" value="javascript" formControlName="javascript"> <label>javascript</label>
+    </div>
+    <div><input type="checkbox" value="angular" formControlName="angular"> <label>angular</label></div>
+    <div><input type="checkbox" value="react" formControlName="react"> <label>react</label></div>
+
+    <div><input type="checkbox" formControlName="termes"> <label>J'accepte les termes.</label></div>
+
+    <button (submit)="onSubmitValidators()">Envoyer</button>
+
+
+    <p>myForm - dirty : {{ myForm.dirty }}</p>
+    <p>myForm - pristine : {{ myForm.pristine }}</p>
+    <p>myForm - touched : {{ myForm.touched }}</p>
+    <p>myForm - valid : {{ myForm.valid }}</p>
+    <p>myForm - invalid : {{ myForm.invalid }}</p>
+
+
+    <p>Lastname - dirty : {{ myForm.controls['lastname'].dirty }}</p>
+    <p>Lastname - pristine : {{ myForm.controls['lastname'].pristine }}</p>
+    <p>Lastname - touched : {{ myForm.controls['lastname'].touched }}</p>
+    <p>Lastname - valid : {{ myForm.controls['lastname'].valid }}</p>
+    <p>Lastname - invalid : {{ myForm.controls['lastname'].invalid }}</p>
+
+</form>

@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { Demo01Component } from './demos/demo01/demo01.component';
 import { Demo02Component } from './demos/demo02/demo02.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Demo03Component } from './demos/demo03/demo03.component';
 import { Demo04Component } from './demos/demo04/demo04.component';
 import { SharedModule } from './shared/shared.module';
@@ -21,6 +21,7 @@ import { ChildInputComponent } from './demos/demo11/child-input/child-input.comp
 import { ChildOutputComponent } from './demos/demo11/child-output/child-output.component';
 import { ChildNgcontentComponent } from './demos/demo11/child-ngcontent/child-ngcontent.component';
 import { Demo12Component } from './demos/demo12/demo12.component';
+import { Demo13Component } from './demos/demo13/demo13.component';
 
 @NgModule({
   declarations: [
@@ -40,13 +41,15 @@ import { Demo12Component } from './demos/demo12/demo12.component';
     ChildInputComponent,
     ChildOutputComponent,
     ChildNgcontentComponent,
-    Demo12Component
+    Demo12Component,
+    Demo13Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule, // Obligatoire pour le ngModel
     SharedModule,
+    ReactiveFormsModule, // Important pour le fonctionnement du FormGroup
   ],
   providers: [],
   bootstrap: [AppComponent]
