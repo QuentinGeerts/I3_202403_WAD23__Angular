@@ -1,0 +1,16 @@
+<h3>Ajouter un produit</h3>
+
+<label for="productName">Nom du produit:</label>
+<input type="text" name="productName" id="productName" [(ngModel)]="productName">
+
+<label for="productQuantity">Quantité:</label>
+<input type="number" name="productQuantity" id="productQuantity" [(ngModel)]="productQuantity">
+
+<button (click)="addProduct()">Ajouter</button>
+
+<app-shopping-list 
+    [products]="products"
+    (decreaseEmitter)="decreaseQuantity($event)"
+    (increaseEmitter)="increaseQuantity($event)"
+    (removeEmitter)="removeProduct($event)"
+     />
