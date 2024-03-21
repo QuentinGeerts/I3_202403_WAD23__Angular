@@ -1,0 +1,18 @@
+<h2>Démonstration 11 - Les Inputs / Outputs</h2>
+
+<p>
+    Les inputs et ouputs sont des mécanismes de communication entre composants. (Parent / enfant)
+</p>
+
+
+<app-child-input [messageFromParent]="message" [colorFromParent]="color" [datas]="datas" />
+<button (click)="changeColor()">Changer la couleur de l'enfant</button>
+
+
+<app-child-output (emitToParent)="receiveEmit($event)" />
+<p>Message provenant de l'enfant : {{ messageFromChild }}</p>
+
+
+<app-child-ngcontent>
+    Ceci est écrit dans le parent mais affiché dans l'enfant.
+</app-child-ngcontent>

@@ -15,6 +15,11 @@ import { Demo06Component } from './demos/demo06/demo06.component';
 import { Demo07Component } from './demos/demo07/demo07.component';
 import { Demo08Component } from './demos/demo08/demo08.component';
 import { Demo09Component } from './demos/demo09/demo09.component';
+import { Demo10Component } from './demos/demo10/demo10.component';
+import { Demo11Component } from './demos/demo11/demo11.component';
+import { ChildInputComponent } from './demos/demo11/child-input/child-input.component';
+import { ChildOutputComponent } from './demos/demo11/child-output/child-output.component';
+import { ChildNgcontentComponent } from './demos/demo11/child-ngcontent/child-ngcontent.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,12 @@ import { Demo09Component } from './demos/demo09/demo09.component';
     Demo06Component,
     Demo07Component,
     Demo08Component,
-    Demo09Component
+    Demo09Component,
+    Demo10Component,
+    Demo11Component,
+    ChildInputComponent,
+    ChildOutputComponent,
+    ChildNgcontentComponent
   ],
   imports: [
     BrowserModule,

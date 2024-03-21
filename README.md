@@ -19,3 +19,6 @@ Pour générer un module :
 
 Pour générer un pipe : 
 > ng generate pipe chemin/vers/le/pipe
+
+Pour générer une directive :
+> ng generate diretive chemin/vers/la/directive

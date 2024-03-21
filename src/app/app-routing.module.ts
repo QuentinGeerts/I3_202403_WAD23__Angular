@@ -11,6 +11,8 @@ import { Demo06Component } from './demos/demo06/demo06.component';
 import { Demo07Component } from './demos/demo07/demo07.component';
 import { Demo08Component } from './demos/demo08/demo08.component';
 import { Demo09Component } from './demos/demo09/demo09.component';
+import { Demo10Component } from './demos/demo10/demo10.component';
+import { Demo11Component } from './demos/demo11/demo11.component';
 
 // BASE_URL = http://localhost:4200/
 
@@ -31,6 +33,8 @@ const routes: Routes = [
       { path: 'demo07', component: Demo07Component, title: 'Démonstration 07 - Les custom Pipes' },
       { path: 'demo08', component: Demo08Component, title: 'Démonstration 08 - Les directives de composants' },
       { path: 'demo09', component: Demo09Component, title: 'Démonstration 09 - Les directives structurelles' },
+      { path: 'demo10', component: Demo10Component, title: 'Démonstration 10 - Les custom directives' },
+      { path: 'demo11', component: Demo11Component, title: 'Démonstration 11 - Les Inputs / Outputs' },
     ]
   },
 

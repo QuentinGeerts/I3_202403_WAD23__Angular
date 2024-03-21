@@ -10,6 +10,7 @@ import { ToCelsiusPipe } from './pipes/to-celsius.pipe';
 import { ToFahrenheitPipe } from './pipes/to-fahrenheit.pipe';
 import { FormsModule } from '@angular/forms';
 import { TempConverterPipe } from './pipes/temp-converter.pipe';
+import { HighlightDirective } from './directives/highlight.directive';
 
 
 
@@ -22,7 +23,8 @@ import { TempConverterPipe } from './pipes/temp-converter.pipe';
     ChronoPipe,
     ToCelsiusPipe,
     ToFahrenheitPipe,
-    TempConverterPipe
+    TempConverterPipe,
+    HighlightDirective
   ],
   imports: [
     CommonModule,
@@ -37,6 +39,7 @@ import { TempConverterPipe } from './pipes/temp-converter.pipe';
     ToCelsiusPipe,
     ToFahrenheitPipe,
     TempConverterPipe,
+    HighlightDirective,
   ]
 })
 export class SharedModule { }

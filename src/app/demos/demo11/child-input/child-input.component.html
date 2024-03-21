@@ -1,0 +1,9 @@
+<p [ngStyle]="{ backgroundColor: colorFromParent }">Message provenant du parent : {{ messageFromParent }}</p>
+
+@if (datas.length > 0) {
+<ul>
+    @for (data of datas; track $index) {
+    <li>{{data.firstname}} {{ data.lastname }}</li>
+    }
+</ul>
+}
