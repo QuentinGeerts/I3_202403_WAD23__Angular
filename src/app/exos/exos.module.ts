@@ -11,6 +11,8 @@ import { Exo04Component } from './exo04/exo04.component';
 import { Exo07dot2Component } from './exo07dot2/exo07dot2.component';
 import { Exo08Component } from './exo08/exo08.component';
 import { Exo09Component } from './exo09/exo09.component';
+import { Exo11Component } from './exo11/exo11.component';
+import { ListArticlesComponent } from './exo11/list-articles/list-articles.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { Exo09Component } from './exo09/exo09.component';
     Exo07dot1Component,
     Exo07dot2Component,
     Exo08Component,
-    Exo09Component
+    Exo09Component,
+    Exo11Component,
+    ListArticlesComponent
   ],
   imports: [
     CommonModule,

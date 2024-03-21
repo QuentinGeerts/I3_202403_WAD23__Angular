@@ -1,0 +1,31 @@
+<h2>Exercice 11 - Panier de courses en Input/Output</h2>
+
+<p>Mettre en place une shopping list en deux composants.</p>
+<p>Dans le premier, un champ texte permettant l'ajout d'un article à la liste.</p>
+<p>Dans le deuxième, l'affichage de la liste et la possibilité de supprimer un article.</p>
+
+<p>Les deux composants doivent être affichage sur une même page.</p>
+<!-- 
+    Composant Exo11 (Premier)
+    - Composant List (Deuxième) 
+-->
+
+<hr>
+
+<h3>Ajouter un produit</h3>
+
+<label for="productName">Nom du produit:</label>
+<input type="text" name="productName" id="productName" [(ngModel)]="productName">
+
+<label for="productQuantity">Quantité:</label>
+<input type="number" name="productQuantity" id="productQuantity" [(ngModel)]="productQuantity">
+
+<button (click)="AddProduct()">Ajouter</button>
+
+<p>Parent : {{ articles | json }}</p>
+
+<app-list-articles 
+    [articlesEnfant]="articles" 
+    (removeEmitter)="removeProduct($event)" 
+    (increaseEmitter)="increaseQuantity($event)" 
+    (decreaseEmitter)="decreaseQuantity($event)"/>

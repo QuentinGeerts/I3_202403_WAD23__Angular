@@ -1,0 +1,19 @@
+
+<p>Enfant : {{ articlesEnfant | json }}</p>
+
+<div *ngIf="articlesEnfant.length > 0; else elseblock">
+    <ul>
+        @for (article of articlesEnfant; track i; let i = $index) {
+            <li>
+                <button (click)="removeProduct(i)">🚮</button>
+                {{ article.name }} x{{ article.quantity }} - ajouté le {{ article.dateAdd | date : 'dd/MM/yyyy à HH:mm' }}
+                <button (click)="decreaseQuantity(i)">-</button>
+                <button (click)="increaseQuantity(i)">+</button>
+            </li>
+        }
+    </ul>
+</div>
+
+<ng-template #elseblock>
+    <div>Aucun produit trouvé dans le panier.</div>
+</ng-template>
