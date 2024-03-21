@@ -22,3 +22,6 @@ Pour générer un pipe :
 
 Pour générer une directive :
 > ng generate diretive chemin/vers/la/directive
+
+Pour générer un service : 
+> ng generate service chemin/vers/le/service
