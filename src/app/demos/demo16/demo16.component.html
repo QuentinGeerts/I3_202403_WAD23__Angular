@@ -1,0 +1,10 @@
+<h2>Démonstration 16 - Les guards</h2>
+
+<p>État de connexion : {{ isConnected }}</p>
+
+<button *ngIf="!isConnected" (click)="login()">Se connecter</button>
+<button *ngIf="isConnected" (click)="logout()">Se déconnecter</button>
+
+<p>
+    <a routerLink="/demos/demo16/guard">Se rendre sur la page gardée</a>
+</p>

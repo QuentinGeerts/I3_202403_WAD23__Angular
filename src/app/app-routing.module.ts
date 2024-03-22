@@ -17,6 +17,9 @@ import { Demo12Component } from './demos/demo12/demo12.component';
 import { Demo13Component } from './demos/demo13/demo13.component';
 import { Demo14Component } from './demos/demo14/demo14.component';
 import { Demo15Component } from './demos/demo15/demo15.component';
+import { Demo16Component } from './demos/demo16/demo16.component';
+import { isAuthenticatedGuard } from './guards/is-authenticated.guard';
+import { canLeaveGuard } from './guards/can-leave.guard';
 
 // BASE_URL = http://localhost:4200/
 
@@ -45,13 +48,18 @@ const routes: Routes = [
       { path: 'demo15', component: Demo15Component, title: 'Démonstration 15 - Le routing avancé' },
 
       { path: 'routing', component: Demo15Component },
-      { path: 'routing/:id', component: Demo15Component }
+      { path: 'routing/:id', component: Demo15Component },
+
+      { path: 'demo16', component: Demo16Component, title: 'Démonstration 16 - Les guards' },
+      { path: 'demo16/guard', component: Demo16Component, title: 'Page gardée', canActivate: [isAuthenticatedGuard], canDeactivate: [canLeaveGuard] },
+
     ]
   },
 
   {
     path: 'exos',
-    loadChildren: () => import('./exos/exos.module').then(m => m.ExosModule)
+    loadChildren: () => import('./exos/exos.module').then(m => m.ExosModule),
+    canActivateChild: [isAuthenticatedGuard]
   },
 
   {
