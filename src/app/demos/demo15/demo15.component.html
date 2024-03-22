@@ -1,0 +1,15 @@
+<h2>Démonstration 15 - Le routing avancé</h2>
+
+
+<h3>Redirection vers la route <code>demos/routing</code></h3>
+<button (click)="navigate()">demos/routing</button>
+
+<h3>Redirection vers la route <code>demos/routing/42</code></h3>
+<button (click)="navigateWithParams(42)">demos/routing/42</button>
+<button (click)="navigateWithParams(99)">demos/routing/99</button>
+<p *ngIf="id">L'id récupéré dans l'URL : {{ id }}</p>
+
+<h3>Redirection vers la route <code>demos/routing</code></h3>
+<button (click)="navigateWithQueryParams('quentin')">demos/routing</button>
+<button (click)="navigateWithQueryParams('samuel')">demos/routing</button>
+<p *ngIf="name">name récupéré : {{ name }}</p>

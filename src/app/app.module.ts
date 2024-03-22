@@ -23,6 +23,7 @@ import { ChildNgcontentComponent } from './demos/demo11/child-ngcontent/child-ng
 import { Demo12Component } from './demos/demo12/demo12.component';
 import { Demo13Component } from './demos/demo13/demo13.component';
 import { Demo14Component } from './demos/demo14/demo14.component';
+import { Demo15Component } from './demos/demo15/demo15.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { Demo14Component } from './demos/demo14/demo14.component';
     ChildNgcontentComponent,
     Demo12Component,
     Demo13Component,
-    Demo14Component
+    Demo14Component,
+    Demo15Component,
   ],
   imports: [
     BrowserModule,
