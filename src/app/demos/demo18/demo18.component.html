@@ -1,0 +1,26 @@
+<h2>Démonstration 18 - Les storages</h2>
+
+
+<h3>LocalStorage</h3>
+
+<input type="text" [(ngModel)]="username">
+
+<button (click)="saveLocal()">Save</button>
+<button (click)="loadLocal()">Load</button>
+<button (click)="removeLocal()">Remove</button>
+<button (click)="clearLocal()">Clear</button>
+
+<p>Username récupéré : {{ usernameFromLocal }}</p>
+
+
+<h3>SessionStorage</h3>
+
+<input type="text" [(ngModel)]="username">
+
+<button (click)="saveSession()">Save</button>
+<button (click)="loadSession()">Load</button>
+<button (click)="removeSession()">Remove</button>
+<button (click)="clearSession()">Clear</button>
+
+<p>Username récupéré : {{ usernameFromSession }}</p>
+

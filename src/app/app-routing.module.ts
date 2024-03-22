@@ -22,6 +22,7 @@ import { isAuthenticatedGuard } from './guards/is-authenticated.guard';
 import { canLeaveGuard } from './guards/can-leave.guard';
 import { Demo17Component } from './demos/demo17/demo17.component';
 import { userResolver } from './resolvers/user.resolver';
+import { Demo18Component } from './demos/demo18/demo18.component';
 
 // BASE_URL = http://localhost:4200/
 
@@ -56,12 +57,14 @@ const routes: Routes = [
       { path: 'demo16/guard', component: Demo16Component, title: 'Page gardée', canActivate: [isAuthenticatedGuard], canDeactivate: [canLeaveGuard] },
 
       { path: 'demo17', component: Demo17Component, title: 'Démonstration 17 - Les resolvers' },
-      { 
-        path: 'demo17/:id', 
-        component: Demo17Component, 
-        title: 'Démonstration 17 - Les resolvers', 
-        resolve: { user: userResolver } 
+      {
+        path: 'demo17/:id',
+        component: Demo17Component,
+        title: 'Démonstration 17 - Les resolvers',
+        resolve: { user: userResolver }
       },
+
+      { path: 'demo18', component: Demo18Component, title: 'Démonstration 18 - Les storages' }
 
     ]
   },
