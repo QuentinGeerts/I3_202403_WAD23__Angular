@@ -22,6 +22,7 @@ import { ChildOutputComponent } from './demos/demo11/child-output/child-output.c
 import { ChildNgcontentComponent } from './demos/demo11/child-ngcontent/child-ngcontent.component';
 import { Demo12Component } from './demos/demo12/demo12.component';
 import { Demo13Component } from './demos/demo13/demo13.component';
+import { Demo14Component } from './demos/demo14/demo14.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { Demo13Component } from './demos/demo13/demo13.component';
     ChildOutputComponent,
     ChildNgcontentComponent,
     Demo12Component,
-    Demo13Component
+    Demo13Component,
+    Demo14Component
   ],
   imports: [
     BrowserModule,

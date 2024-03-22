@@ -59,17 +59,17 @@ export class Demo13Component implements OnInit {
     // ....
 
     if (this.myForm.valid) {
-     
+
       // Envoie des données ...
 
     }
     else {
-      
+
       if (this.myForm.controls['lastname'].invalid) {
         console.log("Champ lastname invalid")
       }
 
-    
+
 
     }
 

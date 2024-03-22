@@ -1,0 +1,43 @@
+<h2>Démonstration 14 - Les custom validators</h2>
+
+<form [formGroup]="formGroup" (ngSubmit)="send()">
+
+    <label>Lastname: </label>
+    <input type="text" formControlName="name">
+    <ng-container *ngIf="formGroup.get('name')?.touched">
+        <span *ngIf="formGroup.get('name')?.errors">
+            {{ formGroup.get('name')?.errors?.["requis"] }}
+            {{ formGroup.get('name')?.errors?.["minLength"] }}
+            {{ formGroup.get('name')?.errors?.["notATest"] }}
+        </span>
+    </ng-container>
+
+    <label>Email: </label>
+    <input type="email" formControlName="email">
+    <ng-container *ngIf="formGroup.get('email')?.touched">
+        <span *ngIf="formGroup.get('email')?.errors">
+            {{ formGroup.get('email')?.errors?.["requis"] }}
+            {{ formGroup.get('email')?.errors?.["pattern"] }}
+        </span>
+    </ng-container>
+
+    <label>Password: </label>
+    <input type="password" formControlName="password">
+    <ng-container *ngIf="formGroup.get('password')?.touched">
+        <span *ngIf="formGroup?.errors">
+            {{ formGroup.errors?.["passwordRequired"] }}
+        </span>
+    </ng-container>
+
+    <label>Password check: </label>
+    <input type="password" formControlName="passwordCheck">
+    <ng-container *ngIf="formGroup.get('passwordCheck')?.touched">
+        <span *ngIf="formGroup?.errors">
+            {{ formGroup.errors?.["passwordCheckRequired"] }}
+            {{ formGroup.errors?.["twoPasswordError"] }}
+        </span>
+    </ng-container>
+
+    <button (submit)="send()">Envoyer</button>
+
+</form>
