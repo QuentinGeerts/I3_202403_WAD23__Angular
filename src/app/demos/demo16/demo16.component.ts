@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FakeAuthService } from '../demo12/services/fake-auth.service';
+import { FakeAuthService } from '../../services/fake-auth.service';
 
 @Component({
   selector: 'app-demo16',

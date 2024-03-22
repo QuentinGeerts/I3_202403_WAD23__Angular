@@ -1,6 +1,6 @@
 import { inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
-import { FakeAuthService } from '../demos/demo12/services/fake-auth.service';
+import { FakeAuthService } from '../services/fake-auth.service';
 
 export const isAuthenticatedGuard: CanActivateFn = (route, state) => {
   return inject(FakeAuthService).isAuthenticated

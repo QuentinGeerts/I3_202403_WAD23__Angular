@@ -1,6 +1,10 @@
 <nav>
     <ul>
         <li>État de connexion : {{ isConnectedNavbar }}</li>
+        <li>
+            <button *ngIf="!isConnectedNavbar" (click)="login()">Se connecter</button>
+            <button *ngIf="isConnectedNavbar" (click)="logout()">Se déconnecter</button>
+        </li>
     </ul>
 
     <ul>
@@ -27,6 +31,7 @@
                 <li><a routerLink="/demos/demo16">Demo 16</a></li>
                 <li><a routerLink="/demos/demo17">Demo 17</a></li>
                 <li><a routerLink="/demos/demo18">Demo 18</a></li>
+                <li><a routerLink="/demos/demo19">Demo 19</a></li>
             </ul>
         </li>
 

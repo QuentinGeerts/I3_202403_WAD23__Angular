@@ -1,0 +1,6 @@
+<h2>Démonstration 19 - Les observables</h2>
+
+<p>État de connexion : {{ isConnected }}</p>
+
+<button *ngIf="!isConnected" (click)="login()">Se connecter</button>
+<button *ngIf="isConnected" (click)="logout()">Se déconnecter</button>

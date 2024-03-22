@@ -23,6 +23,7 @@ import { canLeaveGuard } from './guards/can-leave.guard';
 import { Demo17Component } from './demos/demo17/demo17.component';
 import { userResolver } from './resolvers/user.resolver';
 import { Demo18Component } from './demos/demo18/demo18.component';
+import { Demo19Component } from './demos/demo19/demo19.component';
 
 // BASE_URL = http://localhost:4200/
 
@@ -64,7 +65,8 @@ const routes: Routes = [
         resolve: { user: userResolver }
       },
 
-      { path: 'demo18', component: Demo18Component, title: 'Démonstration 18 - Les storages' }
+      { path: 'demo18', component: Demo18Component, title: 'Démonstration 18 - Les storages' },
+      { path: 'demo19', component: Demo19Component, title: 'Démonstration 19 - Les observables' },
 
     ]
   },
